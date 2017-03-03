@@ -1,0 +1,51 @@
+<odoo>
+	<data>
+
+		<record id="bench_marketing_view_tree" model="ir.ui.view">
+	        <field name="name">bench.marketing.tree</field>
+	        <field name="model">bench.marketing</field>
+	        <field name="arch" type="xml">
+	            <tree>
+	                <field name="name"/>
+	                <field name="type"/>
+	                <field name="responsible"/>
+	                <field name="state"/>
+	            </tree>
+	        </field>
+    	</record>
+
+    	<record id="bench_marketing_view_form" model="ir.ui.view">
+	        <field name="name">bench.marketing.view.form</field>
+	        <field name="model">bench.marketing</field>
+	        <field name="arch" type="xml">
+	            <form string="Stage Search">
+	            	<header>
+	            		<field name="state" widget="statusbar" clickable="True" />
+	            	</header>
+	                <sheet>
+	                    <group>
+	                        <group>
+	                            <field name="name"/>
+	                            <field name="type"/>
+	                            <field name="responsible"/>
+	                        </group>
+	                    </group>
+	                    <notebook>
+	                    	<page string="Performance Metrics" >
+	                    		<field name="metrics_ids" >
+	                    			<tree editable="bottom">
+	                    				<field name="name" />
+	                    				<field name="team_id" string="Team"/>
+	                    				<field name="target_id" string="Target"/>
+	                    			</tree>
+	                    		</field>
+	                    	</page>
+	                    </notebook>
+	                </sheet>
+	            </form>
+	        </field>
+	    </record>
+
+
+	</data>
+</odoo>

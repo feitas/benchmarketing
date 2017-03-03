@@ -1,0 +1,51 @@
+<odoo>
+  <data>
+
+    
+
+    <!-- actions opening views on models -->
+    
+    <record model="ir.actions.act_window" id="benchmarketing.action_benchmarketing">
+      <field name="name">Benchmarketings</field>
+      <field name="res_model">bench.marketing</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="benchmarketing.action_teams">
+      <field name="name">Teams</field>
+      <field name="res_model">bench.marketing.team</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    
+    <record model="ir.actions.act_window" id="benchmarketing.action_targets">
+      <field name="name">Targets</field>
+      <field name="res_model">bench.marketing.target</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- server action to the one above -->
+
+
+    <!-- Top menu item -->
+    
+    <menuitem name="benchmarketing" id="benchmarketing.menu_root"
+        web_icon="benchmarketing,static/description/icon.png"/>
+    
+    <!-- menu categories -->
+    
+    <menuitem name="BenchMarketing" id="benchmarketing.menu_1" parent="benchmarketing.menu_root"/>
+    <!-- <menuitem name="Menu 2" id="benchmarketing.menu_2" parent="benchmarketing.menu_root"/> -->
+    
+    <!-- actions -->
+    
+    <menuitem name="BenchMarketing" id="benchmarketing.menu_1_benchmarketing" parent="benchmarketing.menu_1"
+              action="benchmarketing.action_benchmarketing" sequence="10"/>
+
+    <menuitem name="Teams" id="benchmarketing.menu_1_teams" parent="benchmarketing.menu_1"
+              action="benchmarketing.action_teams" sequence="20"/>
+
+    <menuitem name="Targets" id="benchmarketing.menu_1_targets" parent="benchmarketing.menu_1"
+              action="benchmarketing.action_targets" sequence="30"/>
+    
+  </data>
+</odoo>
