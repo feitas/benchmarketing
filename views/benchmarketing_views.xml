@@ -20,7 +20,7 @@
 	        <field name="arch" type="xml">
 	            <form string="Stage Search">
 	            	<header>
-	            		<field name="state" widget="statusbar" clickable="True" />
+	            		<field name="state" widget="statusbar" statusbar_visible="draft,analyse,action,done" clickable="True" />
 	            	</header>
 	                <sheet>
 	                    <group>
